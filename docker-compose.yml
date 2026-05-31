@@ -13,7 +13,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
     ports:
       - "5432:5432"
-    restart: on-failure
+    restart: unless-stopped
 
   web:
     build: .
@@ -32,7 +32,7 @@ services:
       - DATABASE_URL=postgres://${POSTGRES_USER:-tgb247_user}:${POSTGRES_PASSWORD:-password}@db:5432/${POSTGRES_DB:-tgb247_db}
     depends_on:
       - db
-    restart: on-failure
+    restart: unless-stopped
 
   nginx:
     image: nginx:alpine
@@ -44,7 +44,7 @@ services:
       - media_volume:/app/media
     depends_on:
       - web
-    restart: on-failure
+    restart: unless-stopped
 
 volumes:
   postgres_data:

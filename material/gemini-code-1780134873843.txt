@@ -1,0 +1,29 @@
+Project Name: "Kompetent.uz" – A platform for the systematic and step-by-step development of students' digital competence.
+Tech Stack: Django, PostgreSQL, Docker, Docker Compose, Tailwind CSS (or Bootstrap 5), HTMX/Alpine.js (for SPA effects), Redis, Celery.
+
+Task: Develop a production-ready, modern architecture consisting of 8 interconnected functional modules. The code must adhere to Clean Code and SOLID principles.
+
+1. SYSTEM MODULES (Business Logic):
+The following 8 modules must be implemented as a single integrated system:
+*   User authentication and role system module: A system for user registration and personal dashboard management that strictly defines the boundaries of Student, Teacher, and Administrator privileges.
+*   Educational (subject) modules and multimedia content block: A module for the systematic placement of theoretical materials and multimedia resources (video lectures, audio, infographics) structured according to the EU's DigComp model, including specific functional blocks for data handling, digital content creation, and security.
+*   Assignments and practical laboratory works module: Covers interactive assignments, coding exercises, and virtual laboratory works designed to develop students' algorithmic and logical thinking.
+*   Testing and diagnostic assessment system: An automated testing and diagnostic task block designed to determine students' mastery and competence levels, with real-time monitoring.
+*   Digital portfolio (e-portfolio) formation module: A mechanism for systematically storing, reflectively analyzing, and showcasing software products, multimedia projects, and practical developments created by students.
+*   Analytical monitoring and results visualization part: A module that statistically analyzes user activity, task completion quality, test results, and growth dynamics, helping to evaluate the effectiveness of the educational process.
+*   Feedback and digital communication mechanisms: LMS (Learning Management System) elements that support interactive forums, commenting, feedback exchanges, and remote collaboration between students and teachers.
+*   Information security module: Includes mechanisms for protecting users' personal data, preventing unauthorized access, SSL protocols, and ensuring academic integrity.
+
+2. DJANGO ADMIN PANEL & CONTENT EDITOR:
+*   Modernize the Django admin panel using `django-jazzmin` or a similar package for an enhanced UI.
+*   Integrate `django-ckeditor-5` or `TinyMCE` into the Django admin to allow teachers and admins to create rich posts, lessons, and assignments (must support code blocks, image, and video uploads).
+
+3. MODERN APP FEATURES & DESIGN:
+*   The design must be visually highly appealing, user-friendly (UI/UX), and minimalist.
+*   Use HTMX and Alpine.js to ensure fast, seamless page transitions without full page reloads.
+*   Configure Celery and Redis to handle asynchronous background tasks (e.g., email notifications, heavy report generation, portfolio file processing).
+
+4. DOCKER & DOCKER COMPOSE:
+*   Write an optimized `Dockerfile` and a comprehensive `docker-compose.yml` file that includes all necessary services: `web` (Django + Gunicorn), `db` (PostgreSQL), `redis`, and `celery`.
+
+Please provide the project architecture structure, the core `models.py` for the 8 modules, and the complete Docker configuration files.

@@ -145,3 +145,10 @@ Loyiha ishlab chiqarish (production) rejimida to'liq xavfsiz (HTTPS) ishlashi uc
    sudo certbot certonly --standalone -d domain_nomi.uz
    ```
 4. Olingan sertifikatlarni Docker-compose va Nginx papkasiga yo'naltirish (Nginx default.conf fayliga SSL sozlamalarini yozish) talab etiladi.
+
+
+
+## cloudflare.com
+DNS:
+Neymserver 1 : jaxson.ns.cloudflare.com
+Neymserver 2 : lara.ns.cloudflare.com
